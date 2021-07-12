@@ -4,7 +4,7 @@
 
 ```bash
 pkg install clang termux-elf-cleaner
-clang kk.cpp -o kk -lstdc++ -pthread
+clang kk.cc -o kk -lstdc++ -pthread
 strip -s kk
 strip -R .comment kk
 termux-elf-cleaner kk
@@ -16,16 +16,20 @@ termux-elf-cleaner kk
 
 ```ash
 apk add musl-dev clang gcc g++
-clang kk.cpp -o kk -lstdc++ -static
+clang kk.cc -o kk -lstdc++ -static
 strip -s kk
 strip -R .comment kk
 ```
+
+预先编译好的版本 https://github.com/kekeimiku/kbz/releases
 
 PS：可以使用 termux 或 linuxdeploy 安装 alpine 
 
 c4droid 不支持 clang 但是可以编译，不过不推荐
 
-交叉编译...
+## 交叉编译
+
+...
 
 ## 测试
 
